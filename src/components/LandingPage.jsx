@@ -6,13 +6,16 @@ const LandingPage = () => {
       <div className='textstructure mt-60 px-20'>
         {["We Create", "Eye Opening", "Presentations"].map((item, index) => (
           <div className='masker' key={index}>
-            <h1 className='uppercase text-[5.8vw] leading-[5vw] tracking-tighter font-["Founders Grotesk"] font-bold'>
+            <div className='w-fit flex items '>
+              {index===1 && (<div className='mr-[0.5vw] rounded-md w-[6.5vw] relative top-[1vw] h-[4.22vw] bg-red-500'> </div>)}
+            <h1 className='uppercase text-[6vw] leading-[5.5vw] tracking-tighter font-["Founders Grotesk X-Condensed"] font-bold'>
               {item}
             </h1>
+            </div>
           </div>
         ))}
       </div>
-      <div className='border-t-[2px] border-zinc-700 mt-32 flex justify-between items-center py-5 px-20 '>
+      <div className='border-t-[2px] border-zinc-700 mt-32 flex justify-between items-center py-5 px-20 text-md'>
         {["For Public and Private Companies", "From the First Pitch to the Last"].map((item, index) => (
           <p key={index} className='text-sm font-light tracking-tight leading-none'>
             {item}
